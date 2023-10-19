@@ -1,3 +1,5 @@
+/* ARRAY */
+
 const discografiaIronMaiden = [
 {id: 1, Nombre: "Iron Maiden", año: 1980, precio: 8500},
 {id: 2, Nombre: "Killers", año: 1981, precio: 3500},
@@ -29,6 +31,8 @@ const discografiaIronMaiden = [
 {id: 28, Nombre: "Senjutsu", año: 2021, precio: 2500},
 ]
 
+/* FUNCIONES */
+
 function filtrarAlbumes(lista, valor1, valor2, valor3, valor4, letras){
     return lista.filter((disco) => 
         disco.año >= valor1 &&
@@ -48,7 +52,7 @@ function mostrarResultados(albumes) {
         albumes.forEach((disco) => {
             mensajesResultados += `\nNombre: ${disco.Nombre}, Año: ${disco.año}, Precio: $${disco.precio}`; 
         });
-    mensajesResultados += `\nPrecio Total: ${precioFinal}`;
+    mensajesResultados += `\nPrecio Total: $${precioFinal}`;
         alert(mensajesResultados);
     }
     else{
@@ -59,6 +63,7 @@ function mostrarResultados(albumes) {
 
 alert ("SUPER TIENDA DE DISCOS DE IRON MAIDEN");
 
+/* PROMPTS Y SUS VARIABLES */
 
 let periodoUno = Number(prompt("Ingrese desde que año quiere consultar sobre el lanzamiento de un disco"));
 let periodoDos = Number(prompt("Ingrese hasta que año quiere consultar sobre el lanzamiento de un disco"));
@@ -68,7 +73,7 @@ let letras  = prompt("Ingrese una palabra o letra que referencie al disco desead
 
 const resultados = filtrarAlbumes(discografiaIronMaiden, periodoUno, periodoDos, costoUno, costoDos, letras);
 const precioFinal = calcularPrecioTotal(resultados);
-mostrarResultados(resultados, precioFinal);
+mostrarResultados(resultados);
 
 
 
