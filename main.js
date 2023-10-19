@@ -42,7 +42,7 @@ function calcularPrecioTotal(albumes){
     return albumes.reduce((total, disco) => total + disco.precio, 0);
 }
 
-function mostrarResultados(albumes, precioTotal) {
+function mostrarResultados(albumes) {
     if (albumes.length > 0) {
         let mensajesResultados = "Resultados:";
         albumes.forEach((disco) => {
@@ -73,41 +73,4 @@ mostrarResultados(resultados, precioFinal);
 
 
 
-
-
-
-// let resultados = undefined;
-// let precioFinal = 0;
-
-// function filtradora (lista, valor1, valor2, valor3, valor4){
-
-//     resultados = lista.filter((disco) => 
-//         disco.año >= valor1 &&
-//         disco.año <= valor2 &&
-//         disco.precio >= valor3 &&
-//         disco.precio <= valor4 &&
-//         disco.Nombre.includes(letras)
-//     )
-    
-// }
-// function sumadorDePrecios(lista){
-//     resultados.forEach(disco => {   
-//         precioFinal += disco.precio
-//     });
-// }
-
-// filtradora(discografiaIronMaiden, periodoUno, periodoDos, costoUno, costoDos);
-// sumadorDePrecios(resultados);
-
-// if (resultados.length > 0) {
-//     let mensajesResultados = "Resultados:";
-//     resultados.forEach((disco) => {
-//         mensajesResultados += `\nNombre: ${disco.Nombre}, Año: ${disco.año}, Precio: $${disco.precio}`; 
-//     });
-// mensajesResultados += `\nPrecio Total: ${precioFinal}`;
-//     alert(mensajesResultados);
-// }
-// else{
-//     alert("No se encontraron resultados que coincidan con los criterios de búsqueda");
-// }
 
